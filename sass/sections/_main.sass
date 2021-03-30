@@ -1,0 +1,77 @@
+.main
+    height: 650px
+    background: url('../img/main_bg.jpg') center (center/cover) no-repeat
+    padding: 21px 0 93px 0
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__title
+        margin: 0
+        margin-top: 91px
+        font-weight: 700
+        color: #fff
+        font-size: 42px
+        text-transform: uppercase
+    &__subtitle
+        margin-top: 17px
+        font-size: 24px
+        font-weight: 300
+        color: #ffffff
+        text-transform: uppercase
+    &__info
+        margin-top: 60px
+        text-align: center
+        display: flex
+        &-card
+            margin-left: 43px
+            img
+                width: 42px
+                height: 46px
+            p
+                width: 121px
+                margin-top: 13px
+                font-size: 14px
+                line-height: 14px
+                font-weight: 300
+                color: #fff
+    &__button
+        margin-top: 68px
+        @include main-button
+        font-size: 16px
+        padding: 15px 45px
+    &__catalog
+        margin-top: 14px
+        p
+            color: #fff
+            font-weight: 300
+            font-size: 16px
+        &-anchor
+            text-transform: uppercase
+            color: #fff
+
+
+
+.header
+    display: flex
+    justify-content: space-between
+    &__text
+        text-align: center
+        color: #fff
+        &-official
+            font-weight: 300
+            font-size: 12px
+        &-discr
+            margin-top: 7px
+            font-weight: 500
+            font-size: 18px
+    &__call
+        text-align: right
+    &__phone
+        margin-bottom: 12px
+        font-weight: 700
+        font-size: 18px
+        color: #fff
+    &__number
+        @include main-button
+        padding: 6px 22px
