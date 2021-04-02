@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="css/style.min.css" />
 	</head>
 	<body>
-		<section class="main">
+		<section id="start" class="main">
 			<div class="container">
 				<div class="header">
 					<div class="header__logo">
@@ -62,7 +62,10 @@
 					>
 					<div class="main__catalog">
 						<p>
-							или <a href="#" class="main__catalog-anchor">перейти в каталог</a>
+							или
+							<a href="#catalog" class="main__catalog-anchor"
+								>перейти в каталог</a
+							>
 						</p>
 					</div>
 				</div>
@@ -153,7 +156,7 @@
 		</section>
 		<!-- /carousel -->
 
-		<section class="catalog">
+		<section id="catalog" class="catalog">
 			<div class="container">
 				<h2 class="catalog__title">Каталог пульсометров</h2>
 				<ul class="catalog__tabs">
@@ -597,6 +600,10 @@
 			</div>
 		</div>
 		<!-- /overlay -->
+
+		<a href="#start" class="pageup">
+			<img src="icons/chevron-circle-up-solid.svg" alt="pageup" />
+		</a>
 
 		<script
 			type="text/javascript"
