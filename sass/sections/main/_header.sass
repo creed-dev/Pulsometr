@@ -1,0 +1,23 @@
+.header
+    display: flex
+    justify-content: space-between
+    &__text
+        text-align: center
+        color: #fff
+        &-official
+            font-weight: 300
+            font-size: 12px
+        &-discr
+            margin-top: 7px
+            font-weight: 500
+            font-size: 18px
+    &__call
+        text-align: right
+    &__phone
+        margin-bottom: 12px
+        font-weight: 700
+        font-size: 18px
+        color: #fff
+    &__number
+        @include main-button
+        padding: 6px 22px
