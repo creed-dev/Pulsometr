@@ -1,7 +1,6 @@
 // Табы для каталога
 const tabsButtons = document.querySelectorAll('.catalog__tab');
 const tabsItems = document.querySelectorAll('.catalog__content');
-console.log([tabsButtons, tabsItems]);
 
 function change(arr, i) {
 	arr.forEach(item => {
@@ -163,6 +162,7 @@ validateForm('#modal-order-form');
 
 // Маска для номера телефона
 const maskSelector = document.querySelectorAll('[data-validate-field=phone]');
+
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(maskSelector);
 
@@ -184,9 +184,7 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 for (let anchor of anchors) {
 	anchor.addEventListener('click', function (e) {
 		e.preventDefault();
-
 		const blockID = anchor.getAttribute('href').substr(1);
-
 		document.getElementById(blockID).scrollIntoView({
 			behavior: 'smooth',
 			block: 'start',
