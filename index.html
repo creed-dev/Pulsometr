@@ -13,7 +13,7 @@
 			href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" type="text/css" href="css/slick.css" />
+		<link rel="stylesheet" href="css/splide.min.css" />
 		<link rel="stylesheet" href="css/style.min.css" />
 	</head>
 	<body>
@@ -146,11 +146,28 @@
 		<!-- /consultation -->
 
 		<section class="carousel">
-			<div class="container">
-				<div class="carousel__inner">
-					<div><img src="img/carousel/slide_1.jpg" alt="slide_1" /></div>
-					<div><img src="img/carousel/slide_2.jpg" alt="slide_2" /></div>
-					<div><img src="img/carousel/slide_3.jpg" alt="slide_3" /></div>
+			<div id="image-slider" class="splide">
+				<div class="splide__arrows">
+					<button class="splide__arrow splide__arrow--prev">
+						<img src="icons/carousel/left_button.svg" alt="prev-slide" />
+					</button>
+					<button class="splide__arrow splide__arrow--next">
+						<img src="icons/carousel/right_button.svg" alt="next-slide" />
+					</button>
+				</div>
+
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img class="splide__img" src="img/carousel/slide_1.jpg" />
+						</li>
+						<li class="splide__slide">
+							<img class="splide__img" src="img/carousel/slide_2.jpg" />
+						</li>
+						<li class="splide__slide">
+							<img class="splide__img" src="img/carousel/slide_3.jpg" />
+						</li>
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -555,7 +572,7 @@
 					/>
 					<div class="alert"></div>
 					<button class="feed-form__button" type="submit">
-						заказать кОНСУЛЬТАЦИЮ
+						заказать консультацию
 					</button>
 				</form>
 			</div>
@@ -563,9 +580,7 @@
 			<div class="modal" id="order">
 				<div class="modal__close">&times;</div>
 				<div class="modal__title">Ваш заказ:</div>
-				<div data-modal="title" class="modal__subtitle">
-					Пульсометр Polar FT1
-				</div>
+				<div data-modal="title" class="modal__subtitle"></div>
 				<form
 					onsubmit="send(event, 'send.php')"
 					action="#"
@@ -613,9 +628,9 @@
 			type="text/javascript"
 			src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
 		></script>
-		<script type="text/javascript" src="js/slick.min.js"></script>
 		<script src="js/just-validate.min.js"></script>
 		<script src="js/inputmask.min.js"></script>
+		<script src="js/splide.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

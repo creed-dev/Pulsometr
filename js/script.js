@@ -1,13 +1,5 @@
 // jQuery
 $(document).ready(function () {
-	// Slick Slider
-	$('.carousel__inner').slick({
-		prevArrow:
-			'<button type="button" class="slick-prev"><img src="icons/carousel/left_button.svg"></button>',
-		nextArrow:
-			'<button type="button" class="slick-next"><img src="icons/carousel/right_button.svg"></button>',
-	});
-
 	// Tabs
 	$('ul.catalog__tabs').on(
 		'click',
@@ -24,6 +16,18 @@ $(document).ready(function () {
 				.addClass('catalog__content_active');
 		}
 	);
+});
+
+// Splide slider
+document.addEventListener('DOMContentLoaded', function () {
+	new Splide('#image-slider', {
+		cover: true,
+		width: '1100px',
+		height: '600px',
+		pagination: false,
+		start: 1,
+		rewind: true,
+	}).mount();
 });
 
 // PHPMailer
@@ -62,7 +66,7 @@ function send(event, php) {
 	req.send(new FormData(event.target));
 }
 
-// Links on catalog items
+// Ссылки в каталоге товаров
 const more = document.querySelectorAll('.catalog-item__link');
 const back = document.querySelectorAll('.catalog-item__back');
 
@@ -92,8 +96,7 @@ back.forEach(item => {
 	});
 });
 
-// Modals
-
+// Модальные окна
 document.querySelectorAll('[data-modal=consultation]').forEach(item => {
 	item.addEventListener('click', () => {
 		document.querySelector('.overlay').style.display = 'block';
@@ -122,8 +125,7 @@ buyBtn.forEach(item => {
 	});
 });
 
-// Validate Forms
-
+// Валидация форм
 function validateForm(form) {
 	new JustValidate(form, {
 		rules: {
@@ -150,7 +152,6 @@ function validateForm(form) {
 			},
 			phone: {
 				required: 'Это поле является обязательным',
-				minLength: '3232',
 			},
 		},
 	});
@@ -160,14 +161,12 @@ validateForm('#main-form');
 validateForm('#modal-consultation-form');
 validateForm('#modal-order-form');
 
-// Mast for phone
-
+// Маска для номера телефона
 const maskSelector = document.querySelectorAll('[data-validate-field=phone]');
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(maskSelector);
 
-// PageUp
-
+// Кнопка перехода к верхушки сайта
 const goTopBtn = document.querySelector('.pageup');
 
 window.addEventListener('scroll', function () {
@@ -180,7 +179,6 @@ window.addEventListener('scroll', function () {
 });
 
 // Плавный переход по якорям
-
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
