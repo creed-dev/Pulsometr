@@ -1,22 +1,22 @@
-// jQuery
-$(document).ready(function () {
-	// Tabs
-	$('ul.catalog__tabs').on(
-		'click',
-		'li:not(.catalog__tab_active)',
-		function () {
-			$(this)
-				.addClass('catalog__tab_active')
-				.siblings()
-				.removeClass('catalog__tab_active')
-				.closest('div.container')
-				.find('div.catalog__content')
-				.removeClass('catalog__content_active')
-				.eq($(this).index())
-				.addClass('catalog__content_active');
-		}
-	);
-});
+// Табы для каталога
+const tabsButtons = document.querySelectorAll('.catalog__tab');
+const tabsItems = document.querySelectorAll('.catalog__content');
+console.log([tabsButtons, tabsItems]);
+
+function change(arr, i) {
+	arr.forEach(item => {
+		item.forEach(j => {
+			j.classList.remove('is-active');
+		});
+		item[i].classList.add('is-active');
+	});
+}
+
+for (let i = 0; i < tabsButtons.length; i++) {
+	tabsButtons[i].addEventListener('click', () => {
+		change([tabsButtons, tabsItems], i);
+	});
+}
 
 // Splide slider
 document.addEventListener('DOMContentLoaded', function () {
