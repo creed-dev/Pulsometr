@@ -1,6 +1,6 @@
 // Табы для каталога
-const tabsButtons = document.querySelectorAll('.catalog__tab');
-const tabsItems = document.querySelectorAll('.catalog__content');
+const tabsButtons = document.querySelectorAll('.products__category-item');
+const tabsItems = document.querySelectorAll('.products__list');
 
 function change(arr, i) {
 	arr.forEach(item => {
@@ -66,32 +66,32 @@ function send(event, php) {
 }
 
 // Ссылки в каталоге товаров
-const more = document.querySelectorAll('.catalog-item__link');
-const back = document.querySelectorAll('.catalog-item__back');
+const more = document.querySelectorAll('.products-item__link');
+const back = document.querySelectorAll('.products-item__back');
 
 more.forEach(item => {
 	item.addEventListener('click', e => {
 		e.preventDefault();
-		const itemWrapper = item.closest('.catalog-item__wrapper');
+		const itemWrapper = item.closest('.products-item__wrapper');
 		itemWrapper
-			.querySelector('.catalog-item__content')
-			.classList.toggle('catalog-item__content_active');
+			.querySelector('.products-item__content')
+			.classList.toggle('products-item__content_active');
 		itemWrapper
-			.querySelector('.catalog-item__list')
-			.classList.toggle('catalog-item__list_active');
+			.querySelector('.products-item__list')
+			.classList.toggle('products-item__list_active');
 	});
 });
 
 back.forEach(item => {
 	item.addEventListener('click', e => {
 		e.preventDefault();
-		const itemWrapper = item.closest('.catalog-item__wrapper');
+		const itemWrapper = item.closest('.products-item__wrapper');
 		itemWrapper
-			.querySelector('.catalog-item__content')
-			.classList.toggle('catalog-item__content_active');
+			.querySelector('.products-item__content')
+			.classList.toggle('products-item__content_active');
 		itemWrapper
-			.querySelector('.catalog-item__list')
-			.classList.toggle('catalog-item__list_active');
+			.querySelector('.products-item__list')
+			.classList.toggle('products-item__list_active');
 	});
 });
 
@@ -112,8 +112,8 @@ document.querySelectorAll('.modal__close').forEach(item => {
 	});
 });
 
-const buyBtn = document.querySelectorAll('.catalog-item__btn');
-const itemTitle = document.querySelectorAll('.catalog-item__title');
+const buyBtn = document.querySelectorAll('.products-item__prices-btn');
+const itemTitle = document.querySelectorAll('.products-item__title');
 
 buyBtn.forEach(item => {
 	item.addEventListener('click', e => {
