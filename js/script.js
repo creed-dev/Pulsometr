@@ -138,6 +138,7 @@ function validateForm(form) {
 			},
 			phone: {
 				required: true,
+				phone: true,
 			},
 		},
 		messages: {
@@ -151,6 +152,7 @@ function validateForm(form) {
 			},
 			phone: {
 				required: 'Это поле является обязательным',
+				phone: 'Заполните поле полностью',
 			},
 		},
 	});
